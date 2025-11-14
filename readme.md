@@ -7,11 +7,23 @@
 3) From X1, find it's tangent line and it's X axis intersection and call it X2
 4) So on so fourth till it converges to the root
 
+Now it does the same thing programatically with the newton Raphson iteration formula.
+
 
 Newton-Raphson Iteration formula: `XnPlus1 = Xn - (f(Xn) / f'(Xn))`
 
 
 <h1 align='center'>MODULES</h1>
+
+# Core
+
+## MainRecursion
+
+I: `Polynomial:list[list[str]], xn:int, DPAcuraccy:int`
+
+O: `int`
+
+Starts with the first iteration and does the next, it compares if the latest iteration is same (to n d.p.) as the previous one. if not, it does another and keeps on checking
 
 # Base
 
