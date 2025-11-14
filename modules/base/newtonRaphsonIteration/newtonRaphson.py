@@ -1,15 +1,14 @@
 from modules.functional.computeFX.FX import FX
-from modules.functional.differentiate import differentiate
+from modules.functional.differentiate.differentiate import Differentiate
 
 
-def NewtonRaphsonIteration(Polynomial: list[list[str]], xn, n=0):
-    DerivativeFx = differentiate(Polynomial)
+def NewtonRaphsonIteration(Polynomial: list[list[str]], xn:int):
+    DerivativeFx = Differentiate(Polynomial)
 
     FXn = FX(Polynomial,xn)
     DydxXn = FX(DerivativeFx, xn)
 
     XnPlus1 = xn - (FXn / DydxXn)
 
-    IterationCount = n + 1
 
-    return {XnPlus1, IterationCount}
+    return XnPlus1
